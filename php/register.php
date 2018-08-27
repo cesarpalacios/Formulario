@@ -27,10 +27,10 @@ $opinion = $_POST["opinion"];
 //setcookie("encuesta", "20");
 
 if(isset($fecha) && isset($datos) && isset($organizacion) && isset($Nombres) && isset($Apellidos) && isset($Telefono) && isset($Correo) && isset($Funcionario) && isset($atencion) && isset($calidad) && isset($oportunidad) && isset($atencionf) && isset($satisfaccion) && isset($funcionarioc) && isset($Paciencia) && isset($opinion)) {
-	$fp = fopen("/home/ceapalaciosal/registro.csv","a") or die('No abrio');
+	$fp = fopen("../registro.csv","a") or die('No abrio');
 	fwrite($fp, "$fecha | $datos | $organizacion | $Nombres | $Apellidos | $Telefono | $Correo | $Funcionario | $atencion | $calidad | $oportunidad | $atencionf | $satisfaccion | $funcionarioc | $Paciencia | $opinion" . PHP_EOL) or die('no escribio');
 	fclose($fp);
-	header ("Location: https://antv.gov.co/PQRSD.2018/");
+	header ("Location: https://github.com/cesarpalacios");
 }
 
 //if(!isset($_COOKIE["encuesta"])){
